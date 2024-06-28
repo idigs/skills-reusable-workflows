@@ -18,12 +18,4 @@ jobs:
         run: |
           echo "The node version to use is: ${{ inputs.node }}"
 
-  call-reusable-workflow:
-    strategy:
-      matrix:
-        nodeversion: [14, 16, 18, 20]
-    uses: ./.github/workflows/reusable-workflow.yml
-    with:
-      node: ${{ matrix.nodeversion }}
-
 
